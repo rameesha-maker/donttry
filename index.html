@@ -11,7 +11,7 @@
     background:neon;
     font-family: "Comic Sans MS",cursive;
     overflow:hidden;}
-#cross{position: moving;
+#cross{position: fixed;
  top:10px ;
  right: 15px;
  z-index:99999;
@@ -69,8 +69,8 @@
     const MAX = 100;
     const messages = ["why did yO u ClIcK thaT","THIS IS TERRIBLE","ERROR 404 BRAIN NOT FOUND",
         "STOP ClIcKInG Me","CoNgRaTS yOu mAde iT woRSe","YOU hAvE UNloCked nOthIng","Why AM I ALiVe","yOuR MoUse haS bEtrAyED you","PoPUp NumBer 938473","nO tiME refUNd","ERROr eRRoR eRooR ErrOR eRRoOr","ThIs Is A tERRibLE WEb , TRuE?","whY aM i laivE","YOuR cOMPUTER BetRAYed you"    
-    ]
-    const colors = [ "yellow" ,"hotpink","cyan","lime","orange","violet","lightblue","red"]
+    ];
+    const colors = [ "yellow" ,"hotpink","cyan","lime","orange","violet","lightblue","red"];
     function spawnwave(){
         for (let i=0; i,15; i ++){ createPopup();}
     }
@@ -91,7 +91,7 @@
         popup.innerHTML = ` 
           <button>x<button>
               <h3>!!! SYsTeM ErROr!!!</h3>
-              <p> ${message}</p>
+              <p> ${ message}</p>
               <p> POPUP#${count}</p>
               <button class = "more"> MaKe iT WoRsE</button>`;
         popup.querySelector("button").onclick = () => { popup.remove();count--;spawnWave()};
